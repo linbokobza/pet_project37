@@ -1,0 +1,37 @@
+{% load static %}
+<html class="Loginpage">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>project Loginpage</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <form method="post" action="/signin" class="box1">
+      {% csrf_token %}
+      <h1>התחבר</h1>
+      <input
+        type="text"
+        class="form-control"
+        id="username"
+        name="username"
+        placeholder="Enter Your Username"
+        required
+      />
+
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        name="password"
+        placeholder="Enter Your Password"
+        required
+      />
+      <input type="submit" name="" value="Login" />
+    </form>
+
+    <!-- <input type="text" name="" placeholder="Email" />
+      <input type="password" name="" placeholder="password" />
+      <input type="submit" name="" value="Login" /> -->
+  </body>
+</html>
